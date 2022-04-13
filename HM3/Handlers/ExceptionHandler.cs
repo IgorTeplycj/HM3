@@ -27,7 +27,7 @@ namespace HM3.Handlers
 
             exHndlrColl.Add(GetHash(new RepeatedCommand(null), new DivideByZeroException()), handlerWriteLog.Handle);
             exHndlrColl.Add(GetHash(new RepeatedCommand(null), new NullReferenceException()), handlerWriteLog.Handle);
-            exHndlrColl.Add(GetHash(new TwoRepeatedCommand(null), new ArgumentOutOfRangeException()), handlerWriteLog.Handle);
+           exHndlrColl.Add(GetHash(new TwoRepeatedCommand(null), new ArgumentOutOfRangeException()), handlerWriteLog.Handle);
         }
         public void Handle(IRunCommand command, Exception ex, Action<IRunCommand> method)
         {
